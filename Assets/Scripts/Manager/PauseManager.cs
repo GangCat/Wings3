@@ -28,13 +28,11 @@ public class PauseManager : MonoBehaviour
 
         if (isPaused)
         {
-            Cursor.visible = true;
             PauseGame();
             OnPauseCallback?.Invoke(true);
         }
         else
         {
-            Cursor.visible = false;
             ResumeGame();
             OnPauseCallback?.Invoke(false);
         }

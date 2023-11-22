@@ -7,7 +7,7 @@ public class ActionCamera : MonoBehaviour
     public void Init(VoidBoolDelegate _actionFinishCallback)
     {
         soundManager = SoundManager.Instance;
-        soundManager.Init(gameObject);
+        soundManager.AddAudioComponent(gameObject);
         anim = GetComponent<Animator>();
         cam = GetComponent<Camera>();
         subCam = GetComponentInChildren<Camera>();

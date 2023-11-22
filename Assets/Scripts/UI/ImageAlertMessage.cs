@@ -7,7 +7,7 @@ public class ImageAlertMessage : MonoBehaviour
     public void Init()
     {
         soundManager = SoundManager.Instance;
-        soundManager.Init(gameObject);
+        soundManager.AddAudioComponent(gameObject);
         textAlert = GetComponentInChildren<TextAlertMessage>();
         textAlert.Init();
     }

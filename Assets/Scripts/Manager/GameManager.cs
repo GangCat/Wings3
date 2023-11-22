@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour, IPublisher
             Time.timeScale = 1f;
         }
 
-        Broker.Clear();
         StartGame();
     }
 
@@ -26,8 +25,6 @@ public class GameManager : MonoBehaviour, IPublisher
     {
         FindManager();
         InitManagers();
-        if(isAutoStart)
-            bossMng.GameStart();
     }
 
     private void FindManager()
@@ -40,11 +37,12 @@ public class GameManager : MonoBehaviour, IPublisher
         obstacleMng = FindFirstObjectByType<ObstacleManager>();
         marbleMng = FindFirstObjectByType<MarbleManager>();
         pauseMng = FindFirstObjectByType<PauseManager>();
+        soundMng = FindFirstObjectByType<SoundManager>();
     }
 
     private void InitManagers()
     {
-
+        soundMng.Init();
         audioMng.Init();
         uiMng.Init(pauseMng.TogglePause);
         camMng.Init(playerTr, playerMng.PData, ActionFinish);
@@ -52,7 +50,7 @@ public class GameManager : MonoBehaviour, IPublisher
         playerMng.Init(value => { uiMng.UpdateSp(value); }, value => { uiMng.UpdateHp(value); }, audioMng.PlayPlayerAudio, GameOver); 
         obstacleMng.Init();
         marbleMng.Init();
-        pauseMng.Init(value => { uiMng.SetPauseManger(value); }); 
+        pauseMng.Init(value => { uiMng.SetPauseManger(value); });
     }
 
     public void CameraAction(int _curPhaseNum)
@@ -65,10 +63,7 @@ public class GameManager : MonoBehaviour, IPublisher
         if (!_isGameClear)
             bossMng.ActionFinish();
         else
-        {
             uiMng.GameClear();
-            pauseMng.SetGameOver(true);
-        }
     }
 
     public void RegisterBroker()
@@ -104,8 +99,6 @@ public class GameManager : MonoBehaviour, IPublisher
             bossMng.GameStart();
         else if (Input.GetKeyDown(jumpToNextPatternKeyCode))
             bossMng.JumpToNextPattern();
-        else if (Input.GetKeyDown(finishGameKeyCode))
-            bossMng.FinishiDebug();
     }
 
     [SerializeField]
@@ -116,11 +109,6 @@ public class GameManager : MonoBehaviour, IPublisher
     private KeyCode nextPhaseKeyCode = KeyCode.PageUp;
     [SerializeField]
     private KeyCode jumpToNextPatternKeyCode = KeyCode.PageDown;
-    [SerializeField]
-    private KeyCode finishGameKeyCode = KeyCode.Backspace;
-
-    [SerializeField]
-    private bool isAutoStart = false;
 
     private AudioManager audioMng = null;
     private BossManager bossMng = null;
@@ -130,5 +118,5 @@ public class GameManager : MonoBehaviour, IPublisher
     private ObstacleManager obstacleMng = null;
     private PauseManager pauseMng = null;
     private MarbleManager marbleMng = null;
-
+    private SoundManager soundMng = null;
 }

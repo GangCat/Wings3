@@ -15,7 +15,7 @@ public class SitDownActionNode : ActionNode
     protected override void OnStart()
     {
         soundManager = SoundManager.Instance;
-        soundManager.Init(context.sitDownSoundSpawnGO);
+        soundManager.AddAudioComponent(context.sitDownSoundSpawnGO);
         soundManager.PlayAudio(context.sitDownSoundSpawnGO.GetComponent<AudioSource>(), (int)SoundManager.ESounds.BOSSSITDOWNSOUND, true);
 
         context.anim.bossSitDown();

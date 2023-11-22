@@ -5,13 +5,16 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-public class PlayerController : MonoBehaviour, IKnockBackable, ISubscriber
+public class PlayerController : MonoBehaviour, IKnockBackable
 {
     public delegate void PlayAudioDelegate(EPlayerAudio _playerAudio);
     private PlayAudioDelegate playAudioCallback = null;
     private VoidVoidDelegate gameoverCallback = null;
-    public void Init(PlayerData _playerData, VoidIntDelegate _spUpdateCallback, VoidFloatDelegate _hpUpdateCallback, VoidVoidDelegate _gameoverCallback, PlayAudioDelegate _playAudioCallback, VolumeProfile _volumeProfile, VoidVoidDelegate _gameClearCallback)
+    private SoundManager soundManager = null;
+    public void Init(PlayerData _playerData, VoidIntDelegate _spUpdateCallback, VoidFloatDelegate _hpUpdateCallback, VoidVoidDelegate _gameoverCallback, PlayAudioDelegate _playAudioCallback, VolumeProfile _volumeProfile)
     {
+
+        soundManager = SoundManager.Instance;
         playerData = _playerData;
         volumeProfile = _volumeProfile;
         moveCtrl = GetComponentInChildren<PlayerMovementController>();
@@ -29,8 +32,8 @@ public class PlayerController : MonoBehaviour, IKnockBackable, ISubscriber
         playerData.tr = transform;
         playAudioCallback = _playAudioCallback;
         gameoverCallback = _gameoverCallback;
-        gameClearCallback = _gameClearCallback;
 
+        soundManager.AddAudioComponent(gameObject);
         moveCtrl.Init(playerData,_spUpdateCallback);
         rotCtrl.Init(playerData);
         animCtrl.Init();
@@ -39,7 +42,8 @@ public class PlayerController : MonoBehaviour, IKnockBackable, ISubscriber
         missileCamCtrl.Init();
         virtualMouse.Init(playerData);
 
-        Subscribe();
+        soundManager.PlayAudio(GetComponent<AudioSource>(),(int)SoundManager.ESounds.PLAYERIDLESOUND,true,false);
+
     }
 
     private void BoundaryTrigger(bool _isExit)
@@ -175,9 +179,6 @@ public class PlayerController : MonoBehaviour, IKnockBackable, ISubscriber
 
     private void Update()
     {
-        if (isGameClear)
-            return;
-
         DebugColorChange();
         moveCtrl.PlayerDodge(playerData.input.InputQ, playerData.input.InputE);
         virtualMouse.UpdateMouseInput();
@@ -186,9 +187,6 @@ public class PlayerController : MonoBehaviour, IKnockBackable, ISubscriber
 
     private void FixedUpdate()
     {
-        if (isGameClear)
-            return;
-
         virtualMouse.FixedUpdateMouseInput();
         rotCtrl.PlayerRotate();
         rotCtrl.PlayerFixedRotate();
@@ -203,6 +201,9 @@ public class PlayerController : MonoBehaviour, IKnockBackable, ISubscriber
             screenMat.SetFloat("_isDash", 0);
     }
 
+    private void AnimatorTest()
+    {
+    }
 
 
     private void DebugColorChange()
@@ -218,24 +219,12 @@ public class PlayerController : MonoBehaviour, IKnockBackable, ISubscriber
         else if (playerData.isDash == true)
         {
             playerMesh.material.SetColor("_BaseColor", Color.blue);
+           // soundManager.PlayAudio(GetComponent<AudioSource>(), (int)SoundManager.ESounds.PLAYERDASHSOUND, true, false);
         }
         else
         {
             playerMesh.material.SetColor("_BaseColor", Color.white);
-        }
-    }
-
-    public void Subscribe()
-    {
-        Broker.Subscribe(this, EPublisherType.BOSS_CONTROLLER);
-    }
-
-    public void ReceiveMessage(EMessageType _message)
-    {
-        if (_message.Equals(EMessageType.GAME_CLEAR_ALERT))
-        {
-            isGameClear = true;
-            gameClearCallback?.Invoke();
+            //soundManager.PlayAudio(GetComponent<AudioSource>(), (int)SoundManager.ESounds.PLAYERIDLESOUND, true, false);
         }
     }
 
@@ -253,9 +242,6 @@ public class PlayerController : MonoBehaviour, IKnockBackable, ISubscriber
 
     private PlayerData playerData = null;
     private CameraShake camShake = null;
-    private bool isGameClear = false;
-
-    private VoidVoidDelegate gameClearCallback = null;
 
     [SerializeField]
     private Material screenMat = null;

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TheKiwiCoder;
+using System.Buffers;
+using UnityEditor.ShaderGraph.Drawing.Inspector.PropertyDrawers;
 
 public class CannonRainActionNode : ActionNode
 {
@@ -47,7 +49,7 @@ public class CannonRainActionNode : ActionNode
         //SoundManager.PlayAudio((int)SoundManager.ESounds.CANNONLAUNCHSOUND);
         for (int i = 0; i < context.cannonSoundSpawnGOs.Length; ++i)
         {
-            soundManager.Init(context.cannonSoundSpawnGOs[i]);
+            soundManager.AddAudioComponent(context.cannonSoundSpawnGOs[i]);
         }
         
 

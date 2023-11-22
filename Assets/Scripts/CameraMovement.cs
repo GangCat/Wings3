@@ -25,14 +25,14 @@ public class CameraMovement : MonoBehaviour
             playerData.isFreeLock = false;
         }
 
-        //if (Input.GetKeyDown(KeyCode.Tab) && !playerData.isFreeLock) 
-        //{
-        //    backMirror = true;
-        //}
-        //else if (Input.GetKeyUp(KeyCode.Tab)) 
-        //{
-        //    backMirror = false;
-        //}
+        if (Input.GetKeyDown(KeyCode.Tab) && !playerData.isFreeLock) 
+        {
+            backMirror = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.Tab)) 
+        {
+            backMirror = false;
+        }
 
 
     }

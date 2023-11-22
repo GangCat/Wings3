@@ -15,7 +15,7 @@ public class WindBlowAnimActionNode : ActionNode
     private SoundManager soundManager = null;
     protected override void OnStart() {
         soundManager = SoundManager.Instance;
-        soundManager.Init(context.windBlowSoundSpawnGO);
+        soundManager.AddAudioComponent(context.windBlowSoundSpawnGO);
         soundManager.PlayAudio(context.windBlowSoundSpawnGO.GetComponent<AudioSource>(), (int)SoundManager.ESounds.BOSSTORNADOSOUND, true);
         //context.anim.SetBool("isWindBlowStart", isWindBlow);
         Debug.Log("start");

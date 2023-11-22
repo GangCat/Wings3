@@ -18,7 +18,7 @@ public class BombPatternController : MonoBehaviour
         Transform _targetTr)
     {
         soundManager = SoundManager.Instance;
-        soundManager.Init(gameObject);
+        soundManager.AddAudioComponent(gameObject);
         patternFinishCallback = _patternFinishDelegate;
         bossRotationCallback = _bossRotationCallback;
         reloadCannonCallback = _reloadCannonCallback;
@@ -34,12 +34,6 @@ public class BombPatternController : MonoBehaviour
 
     public void StartPattern()
     {
-        if (isDebugMode)
-        {
-            FinishPattern();
-            return;
-        }
-
         StartWindBlow();
         StartCoroutine(PatternCoroutine());
         Debug.Log("PatterStart");
@@ -134,6 +128,7 @@ public class BombPatternController : MonoBehaviour
                     yield return waitFixedTime;
 
                 laserGo = LaunchLaser(laserRotation, colors[ranSelect[laserCount]], ranSelect[laserCount]);
+                soundManager.StopAudio(GetComponent<AudioSource>());
             }
 
             if (laserGo)
@@ -199,7 +194,7 @@ public class BombPatternController : MonoBehaviour
     {
         GameObject laserChargeGo = Instantiate(laserChargePrefab, laserLaunchTr.position+ laserLaunchTr.forward*80f, laserLaunchTr.rotation,transform);
         VisualEffect vfx = laserChargeGo.GetComponent<VisualEffect>();
-
+        
         vfx.SetFloat("Duration", laserDelay);
         float decreaseChargeDuration = laserDelay - 2f;
         vfx.SetFloat("ChargeDuration", decreaseChargeDuration);
@@ -300,8 +295,6 @@ public class BombPatternController : MonoBehaviour
     private float startDelay = 10f;
     [SerializeField]
     private WindBlowHolder windBlowHolder = null;
-    [SerializeField]
-    private bool isDebugMode = false;
 
     private GameObject[] arrBombGo = null;
     private VoidVoidDelegate patternFinishCallback = null;

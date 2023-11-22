@@ -13,7 +13,7 @@ public class Bomb : MonoBehaviour
         myIdx = _idx;
         waitFixedTime = new WaitForFixedUpdate();
         soundManager = SoundManager.Instance;
-        soundManager.Init(gameObject);
+        soundManager.AddAudioComponent(gameObject);
         audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
 
@@ -69,6 +69,7 @@ public class Bomb : MonoBehaviour
         particleGo.transform.rotation = Quaternion.Euler(Vector3.left * 90f);
         StopCoroutine("SpinModelCoroutine");
         SetColor();
+        soundManager.PlayAudio(audioSource, (int)SoundManager.ESounds.TIMEBOMBTIMEFLOWSOUND,true);
     }
 
     private IEnumerator SpinModelCoroutine()
@@ -87,7 +88,11 @@ public class Bomb : MonoBehaviour
         if (other.TryGetComponent<LaserController>(out var comp))
         {
             if (comp.GetIdx.Equals(myIdx))
-                Destroy(gameObject);
+            {
+                soundManager.PlayAudio(audioSource, (int)SoundManager.ESounds.TIMEBOMBEXPLOSIONSOUND);
+                SetObjectToInvisible();
+                Destroy(gameObject, 5f);
+            }
         }
     }
 
@@ -96,14 +101,25 @@ public class Bomb : MonoBehaviour
         // 폭발하며 플레이어에게 큰 데미지
         targetTr.GetComponent<IPlayerDamageable>().ForceGetDmg(150);
         // 화면 연출
-        soundManager.PlayAudio(audioSource, (int)SoundManager.ESounds.TIMEBOMBTIMEFLOWSOUND);
+        
         soundManager.PlayAudio(audioSource, (int)SoundManager.ESounds.TIMEBOMBEXPLOSIONSOUND);
+        
+        SetObjectToInvisible();
         Destroy(Instantiate(explosionPrefab, transform.position, Quaternion.identity), 5f);
         Debug.Log("Explosion!");
-        Destroy(gameObject);
+        Destroy(gameObject,5f);
+    }
+    private void SetObjectToInvisible()
+    {
+        ch1.SetActive(false);
+        ch2.SetActive(false);
+        gameObject.GetComponent<Collider>().enabled = false;
     }
 
-
+    [SerializeField]
+    private GameObject ch1;
+    [SerializeField]
+    private GameObject ch2;
     [SerializeField]
     private Transform projectile;
     [SerializeField]

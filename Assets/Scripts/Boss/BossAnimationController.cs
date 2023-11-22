@@ -36,8 +36,8 @@ public class BossAnimationController : MonoBehaviour
 
     public void ResetBoss()
     {
-        bossAnims[(int)EBossAnimator.Body].Play("BodyStand");
-        bossAnims[(int)EBossAnimator.Leg].Play("LegStandUp");
+        bossAnims[(int)EBossAnimator.Body].Play("BodySit");
+        bossAnims[(int)EBossAnimator.Leg].Play("LegSit");
     }
 
     public void OpenMissileDoor()

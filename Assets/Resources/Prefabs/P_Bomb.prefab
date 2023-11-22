@@ -34,7 +34,6 @@ Transform:
   m_Children:
   - {fileID: 2104786485243898103}
   - {fileID: 3241080854932599191}
-  - {fileID: 8019113069092800836}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4270280909587198845
@@ -49,6 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18e18017206ed344684ca884f931f840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ch1: {fileID: 1620843436274954829}
+  ch2: {fileID: 2010073920951558495}
   projectile: {fileID: 2433025337043198025}
   explosionPrefab: {fileID: 8892962482691636397, guid: 8860735a010aa9d479ecc26dfffe0d53,
     type: 3}
@@ -109,7 +110,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2433025337043198025}
+    m_TransformParent: {fileID: 2104786485243898103}
     m_Modifications:
     - target: {fileID: 1932266126581707331, guid: 0cdbf4d4f44cfd749af07cc4e4de05fb,
         type: 3}
@@ -154,17 +155,17 @@ PrefabInstance:
     - target: {fileID: 8668531580458287597, guid: 0cdbf4d4f44cfd749af07cc4e4de05fb,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8668531580458287597, guid: 0cdbf4d4f44cfd749af07cc4e4de05fb,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8668531580458287597, guid: 0cdbf4d4f44cfd749af07cc4e4de05fb,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8668531580458287597, guid: 0cdbf4d4f44cfd749af07cc4e4de05fb,
         type: 3}
@@ -281,9 +282,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cannon Bomb
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e20ee9eef36d0134f88a78a2d24a2950,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e20ee9eef36d0134f88a78a2d24a2950,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8019113069092800836}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e20ee9eef36d0134f88a78a2d24a2950, type: 3}
 --- !u!1 &1620843436274954829 stripped
@@ -365,6 +375,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: P_BombParticleSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803844235779252444, guid: b6dbcce3e38ca374aa33b48d8b769ee6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

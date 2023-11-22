@@ -17,7 +17,7 @@ public class WindBlowActionSecondNode : ActionNode
 
     protected override void OnStart() {
         soundManager = SoundManager.Instance;
-        soundManager.Init(context.windBlowSoundSpawnGO);
+        soundManager.AddAudioComponent(context.windBlowSoundSpawnGO);
 
         windBlowPoints = context.bossCtrl.CurSpawnPoints[blackboard.curClosedWeakPoint].GetWindBlowHolder().WindBlowPoints;
         foreach (WindBlowPoint wbp in windBlowPoints)

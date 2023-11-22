@@ -46,6 +46,7 @@ public class CanvasPauseMenu : MonoBehaviour
         //volumeSlider.onValueChanged.AddListener(delegate { ChangeVolumeCallback(volumeSlider.value); });
         sensitiveSlider.onValueChanged.AddListener(delegate { ChangeSensitive(); });
         freeLookSensitiveSlider.onValueChanged.AddListener(delegate { ChangeFreeLookSensitive(); });
+        SetPauseMenu(false);
     }
 
     public void SetPauseMenu(bool _bool)

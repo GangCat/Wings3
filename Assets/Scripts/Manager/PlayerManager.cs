@@ -12,19 +12,13 @@ public class PlayerManager : MonoBehaviour
         playerCtrl = GetComponentInChildren<PlayerController>();
         playerData.input = input;
 
-        playerCtrl.Init(playerData, _spUpdateCallback, _hpUpdateCallback, _gameoverCallback, _playAudioCallback, volumeProfile, EnableDummy);
+        playerCtrl.Init(playerData, _spUpdateCallback, _hpUpdateCallback, _gameoverCallback, _playAudioCallback, volumeProfile);
         pmc.Init(playerData);
-        dummyGo.SetActive(false);
     }
 
     private void FixedUpdate()
     {
         pmc.PlayerModelRotate();
-    }
-
-    private void EnableDummy()
-    {
-        dummyGo.SetActive(true);
     }
 
     public PlayerController PC => playerCtrl;
@@ -35,8 +29,6 @@ public class PlayerManager : MonoBehaviour
     private PlayerModelRotateController pmc = null;
     [SerializeField]
     private VolumeProfile volumeProfile = null;
-    [SerializeField]
-    private GameObject dummyGo = null;
 
     private PlayerController playerCtrl = null;
     private PlayerInputHandler input = null;

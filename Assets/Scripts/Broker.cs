@@ -36,8 +36,7 @@ public class Broker
     {
         for(int i = 0; i < arrListSub.Length; ++i)
         {
-            if(arrListSub[i] != null)
-                arrListSub[i].Clear();
+            arrListSub[i].Clear();
         }
     }
 

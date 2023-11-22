@@ -27,7 +27,7 @@ public class AirPushAcionNode : ActionNode
     }
     protected override void OnStart() {
         soundManager = SoundManager.Instance;
-        soundManager.Init(context.airPushSoundSpawnGO);
+        soundManager.AddAudioComponent(context.airPushSoundSpawnGO);
         if (blackboard.curPhaseNum > 1)
         {
             context.airPushGo.SetActive(true);

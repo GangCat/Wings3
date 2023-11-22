@@ -72,8 +72,9 @@ public class GroupHomingMissile : AttackableObject, IDamageable, ISubscriber
 
     public void Init(Transform _playerTr, Vector3 _spawnPos, Quaternion _spawnRot, GroupMissileMemoryPool _groupMissileMemoryPool, bool _isShieldBreak)
     {
+        SetObjectToVisible();
         soundManager = SoundManager.Instance;
-        soundManager.Init(gameObject);
+        soundManager.AddAudioComponent(gameObject);
             customAudioManager = GetComponent<CustomAudioManager>();
         if (!vfx)
             vfx = GetComponentInChildren<VisualEffect>();
@@ -94,8 +95,7 @@ public class GroupHomingMissile : AttackableObject, IDamageable, ISubscriber
         else
             isFirstTrigger = true;
 
-        vfx.Reinit();
-        mr.enabled = true;
+        vfx.Play();
 
         //deviationAmount = UnityEngine.Random.Range(5f, 20f);
         //deviationSpeed = UnityEngine.Random.Range(0.1f, 1f);
@@ -141,14 +141,14 @@ public class GroupHomingMissile : AttackableObject, IDamageable, ISubscriber
 
             rb.velocity = transform.forward * speed;
             float distanceBetweenPlayer = Vector3.Distance(gameObject.transform.position, playerTr.position);
-            if (distanceBetweenPlayer < 15f)
-            {
-                customAudioManager.PlayAudio((int)EGroupMissileAudio.HOMINGMISSILEPASSINGSOUND, true);
-            }
-            else
-            {
-                customAudioManager.StopAllAudio();
-            }
+            //if (distanceBetweenPlayer < 15f)
+            //{
+            //    customAudioManager.PlayAudio((int)EGroupMissileAudio.HOMINGMISSILEPASSINGSOUND, true);
+            //}
+            //else
+            //{
+            //    customAudioManager.StopAllAudio();
+            //}
             var leadTimePercentage = Mathf.InverseLerp(minDistancePredict, maxDistancePredict, Vector3.Distance(transform.position, playerTr.position));
 
             PredictMovement(leadTimePercentage);
@@ -233,9 +233,11 @@ public class GroupHomingMissile : AttackableObject, IDamageable, ISubscriber
         isExplosed = true;
         GameObject go = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         go.transform.localScale = Vector3.one * explosionRange;
-        
+        Debug.Log("explosion sound play");
+        soundManager.PlayAudio(GetComponent<AudioSource>(), (int)SoundManager.ESounds.GROUPHOMINGMISSILEEXPLOSIONSOUND);
+        SetObjectToInvisible();
         Destroy(go, 5f);
-        customAudioManager.PlayAudio((int)EGroupMissileAudio.NORMALEXPLOSIONSOUND);
+        //customAudioManager.PlayAudio((int)EGroupMissileAudio.NORMALEXPLOSIONSOUND);
         Collider[] arrTempCollider = Physics.OverlapSphere(transform.position, explosionRange, explosionLayer);
         foreach (Collider col in arrTempCollider)
         {
@@ -243,10 +245,7 @@ public class GroupHomingMissile : AttackableObject, IDamageable, ISubscriber
             KnockBack(col);
             AttackDmg(col);
         }
-        if (soundManager.IsPlaying(GetComponent<AudioSource>()))
-        {
-            soundManager.StopAudio(GetComponent<AudioSource>());
-        }
+       
         StopAllCoroutines();
         rb.velocity = Vector3.zero;
         StartCoroutine(DeactivateCoroutine());
@@ -260,6 +259,11 @@ public class GroupHomingMissile : AttackableObject, IDamageable, ISubscriber
         mr.enabled = false;
 
         yield return new WaitForSeconds(effectDisableDelay);
+        if (soundManager.IsPlaying(GetComponent<AudioSource>()))
+        {
+            soundManager.StopAudio(GetComponent<AudioSource>());
+        }
+
         groupMissileMemoryPool.DeactivateGroupMissile(gameObject);
     }
 
@@ -288,6 +292,16 @@ public class GroupHomingMissile : AttackableObject, IDamageable, ISubscriber
             default:
                 break;
         }
+    }
+    private void SetObjectToInvisible()
+    {
+        gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+        gameObject.GetComponent<Collider>().enabled = false;
+    }
+    private void SetObjectToVisible()
+    {
+        gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
+        gameObject.GetComponent<Collider>().enabled = true;
     }
 
     private void OnDrawGizmos()

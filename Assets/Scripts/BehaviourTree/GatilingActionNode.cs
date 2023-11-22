@@ -45,8 +45,8 @@ public class GatilingActionNode : ActionNode
         gatlingHolder = context.gatlingHolderGo;
         gatlinGeadTr = context.gatlingHeadGo.transform;
         soundManager = SoundManager.Instance;
-        soundManager.Init(context.gatlingLaunchSoundSpawnGO);
-        soundManager.Init(context.gatlingRotationSoundSpawnGO);
+        soundManager.AddAudioComponent(context.gatlingLaunchSoundSpawnGO);
+        soundManager.AddAudioComponent(context.gatlingRotationSoundSpawnGO);
 
         soundManager.PlayAudio(context.gatlingRotationSoundSpawnGO.GetComponent<AudioSource>(), (int)SoundManager.ESounds.GATLINGROTATESOUND, true);
         soundManager.PlayAudio(context.gatlingLaunchSoundSpawnGO.GetComponent<AudioSource>(), (int)SoundManager.ESounds.GATLINGSHOOTINGSOUND, true);

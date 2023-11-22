@@ -21,7 +21,7 @@ public class CannonBallController : AttackableObject, ISubscriber
     public void Init(float _speed, Vector3 _spawnPos, CannonMemoryPool _memoryPool = null, PlayEffectAudioDelegate _audioCallback = null)
     {
         soundManager = SoundManager.Instance;
-        soundManager.Init(gameObject);
+        soundManager.AddAudioComponent(gameObject);
         speed = _speed;
         transform.position = _spawnPos;
         memoryPool = _memoryPool;
@@ -104,12 +104,12 @@ public class CannonBallController : AttackableObject, ISubscriber
     }
     private void SetObjectToInvisible()
     {
-        gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
         gameObject.GetComponent<Collider>().enabled = false;
     }
     private void SetObjectToVisible()
     {
-        gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
         gameObject.GetComponent<Collider>().enabled = true;
     }
 }

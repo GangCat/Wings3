@@ -7,7 +7,7 @@ public class BossShieldGenerator : MonoBehaviour, IDamageable
     public void Init(VoidGameObjectDelegate _destroyCallback, Vector3 _bossPos)
     {
         soundManager = SoundManager.Instance;
-        soundManager.Init(gameObject);
+        soundManager.AddAudioComponent(gameObject);
         destroyCallback = _destroyCallback;
         curHp = maxHp;
         myCollider = GetComponent<SphereCollider>();

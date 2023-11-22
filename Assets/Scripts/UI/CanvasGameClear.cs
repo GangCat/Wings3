@@ -13,14 +13,14 @@ public class CanvasGameClear : MonoBehaviour
 
     public void GameClear()
     {
-        Cursor.visible = true;
         gameObject.SetActive(true);
-        Time.timeScale = 0f;
     }
 
     public void ExitGame()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene("CampusScene");
     }
+
+    [SerializeField]
+    private Image image = null;
 }
