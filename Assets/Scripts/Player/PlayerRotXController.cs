@@ -17,17 +17,13 @@ public class PlayerRotXController : MonoBehaviour
     private void Update()
     {
         targetRotateX = tr.rotation.eulerAngles.x;
-        if (targetRotateX >= 250 && targetRotateX<310) // 250
+        if (targetRotateX >= 250)
         {
-            Debug.Log(targetRotateX);
             calcRotateX = 360-targetRotateX;
-        } else if(targetRotateX >= 45 && targetRotateX <= 100) // 5
+        } else if(targetRotateX >= 5 && targetRotateX <= 100)
         {
             calcRotateX = targetRotateX * (playerData.currentMoveSpeed/playerData.moveForwardVelocityLimit);
-        }
-        else
-        {
-            calcRotateX = 45 * (playerData.currentMoveSpeed / playerData.moveForwardVelocityLimit);
+        
         }
 
         currentXRotation = Mathf.Lerp(currentXRotation, calcRotateX, smooth*Time.deltaTime);

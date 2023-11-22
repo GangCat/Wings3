@@ -7,7 +7,7 @@ public class BossShield : MonoBehaviour, IDamageable
     public void Init(VoidVoidDelegate _restorShieldFinishCallback, VoidFloatDelegate _shieldUpdateCallback, VoidVoidDelegate _removeShieldCallback)
     {
         soundManager = SoundManager.Instance;
-        soundManager.Init(gameObject);
+        soundManager.AddAudioComponent(gameObject);
         mr = GetComponent<MeshRenderer>();
         mc = GetComponent<MeshCollider>();
         //brokenLayer = LayerMask.NameToLayer("BossShieldBroken");
@@ -68,8 +68,8 @@ public class BossShield : MonoBehaviour, IDamageable
             yield return new WaitForFixedUpdate();
         }
 
-        RespawnGenerator();
         restorShieldFinishCallback?.Invoke();
+        RespawnGenerator();
     }
 
     public float GetCurHp => 99999;

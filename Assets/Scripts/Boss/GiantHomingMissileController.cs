@@ -62,7 +62,7 @@ public class GiantHomingMissileController : AttackableObject, IDamageable, ISubs
     public void Init(Vector3 _spawnPos, Quaternion _spawnRot, bool _isShieldBreak, Transform _playerTr)
     {
         soundManager = SoundManager.Instance;
-        soundManager.Init(gameObject);
+        soundManager.AddAudioComponent(gameObject);
             customAudioManager = GetComponent<CustomAudioManager>();
         if (!vfx)
             vfx = GetComponentInChildren<VisualEffect>();
@@ -83,7 +83,6 @@ public class GiantHomingMissileController : AttackableObject, IDamageable, ISubs
             isFirstTrigger = true;
 
         vfx.Play();
-        mr.enabled = true;
 
         //deviationAmount = UnityEngine.Random.Range(30f, 70f);
         //deviationSpeed = UnityEngine.Random.Range(1f, 3f);
@@ -211,14 +210,12 @@ public class GiantHomingMissileController : AttackableObject, IDamageable, ISubs
 
         // 플레이어와의 거리 계산 > 가까울 수록 볼륨 크게 > 대형 미사일 폭발 소리
         soundManager.PlayAudio(GetComponent<AudioSource>(), (int)SoundManager.ESounds.GIANTHOMINGMISSILEXPLOSIONSOUND);
+        SetObjectToInvisible();
         //StopCoroutine("AutoExplosionCorutine");
         isExplosed = true;
         GameObject go = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         go.transform.localScale = Vector3.one * explosionRange;
-        if (soundManager.IsPlaying(GetComponent<AudioSource>()))
-        {
-            soundManager.StopAudio(GetComponent<AudioSource>());
-        }
+        
         Destroy(go, 5f);
 
         Collider[] arrTempCollider = Physics.OverlapSphere(transform.position, explosionRange, explosionLayer);
@@ -271,6 +268,17 @@ public class GiantHomingMissileController : AttackableObject, IDamageable, ISubs
                 break;
         }
     }
+    private void SetObjectToInvisible()
+    {
+        gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+        gameObject.GetComponent<Collider>().enabled = false;
+    }
+    private void SetObjectToVisible()
+    {
+        gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
+        gameObject.GetComponent<Collider>().enabled = true;
+    }
+
 
     private void OnDrawGizmos()
     {

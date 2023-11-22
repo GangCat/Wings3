@@ -25,12 +25,10 @@ public class CanvasExitGame : MonoBehaviour
     {
         if (!exitUi.gameObject.activeSelf)
         {
-            Cursor.visible = true;
             exitUi.SetActive(true);
         }
         else
         {
-            Cursor.visible = false;
             exitUi.SetActive(false);
         }
     }

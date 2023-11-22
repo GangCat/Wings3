@@ -8,6 +8,8 @@ using UnityEngine;
 public class BossController : MonoBehaviour, IPublisher
 {
     public delegate BossShieldGeneratorSpawnPoint[] GetRandomSpawnPointDelegate();
+    private SoundManager soundManager = null;
+
     public void Init(
         Transform _playerTr, 
         VoidIntDelegate _cameraActionCallback, 
@@ -15,9 +17,10 @@ public class BossController : MonoBehaviour, IPublisher
         VoidFloatDelegate _shieldUpdateCallback, 
         GetRandomSpawnPointDelegate _getRandomSpawnPointCallback, 
         VoidVoidDelegate _bossClearCalblack, 
-        VoidVoidDelegate _removeShieldCallback,
-        VoidVoidDelegate _startExplosionCallback)
+        VoidVoidDelegate _removeShieldCallback)
     {
+        soundManager = SoundManager.Instance;
+        soundManager.AddAudioComponent(gameObject);
         curPhaseNum = 0;
         animCtrl = GetComponentInChildren<BossAnimationController>();
         bossCollider = GetComponentInChildren<BossCollider>();
@@ -28,15 +31,13 @@ public class BossController : MonoBehaviour, IPublisher
         lastPatternCtrl = GetComponentInChildren<LastPatternController>();
 
         getRandomSpawnPointCallback = _getRandomSpawnPointCallback;
-        bossClearCallback = _bossClearCalblack;
-        startExplosionCallback = _startExplosionCallback;
 
         animCtrl.Init();
         bossCollider.Init();
         statHp.Init(StartPhaseChange, _hpUpdateCallback);
         shield.Init(RestorShieldFinish, _shieldUpdateCallback, _removeShieldCallback);
         timeBombPatternCtrl.Init(FinishPhaseChange, value => { isBossStartRotation = value; }, ()=> { animCtrl.ReloadTimeBomb(); }, AlertFirstPatternLaser, value => { eyeGo.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", value * 5); },_playerTr);
-        lastPatternCtrl.Init(BossClear);
+        lastPatternCtrl.Init(_bossClearCalblack);
         RegisterBroker();
         InitMemoryPools();
 
@@ -46,8 +47,15 @@ public class BossController : MonoBehaviour, IPublisher
         curShieldGeneratorPoint = new List<GameObject>();
         waitFixedUpdate = new WaitForFixedUpdate();
 
+        //InitShieldGeneratorPoint();
+
         cameraActionCallback = _cameraActionCallback;
         playerTr = _playerTr;
+        //myRunner.FinishCurrentPhase();
+        //StartPhaseChange();
+
+        //StartCoroutine("UpdateCoroutine");
+
     }
 
     public BossShieldGeneratorSpawnPoint[] CurSpawnPoints => arrCurShieldGeneratorSpawnPoints;
@@ -74,25 +82,6 @@ public class BossController : MonoBehaviour, IPublisher
     public GameObject TornadoSoundSpawnGO => tornadoSoundSpawnGO;
     public GameObject GiantTornadeSoundSpawnGO => giantTornadeSoundSpawnGO;
 
-    public void BossClear()
-    {
-        StopCoroutine("UpdateCoroutine");
-        bossClearCallback?.Invoke();
-        AlertGameClear();
-        StartCoroutine("BossExplosion");
-    }
-
-    private IEnumerator BossExplosion()
-    {
-        yield return new WaitForSeconds(2f);
-        startExplosionCallback?.Invoke();
-    }
-
-    public void AlertGameStart()
-    {
-        PushMessageToBroker(EMessageType.GAME_START_ALERT);
-    }
-
     public void AlertGiantMissileLaunch()
     {
         PushMessageToBroker(EMessageType.GIANT_MISSILE_ALERT);
@@ -111,11 +100,6 @@ public class BossController : MonoBehaviour, IPublisher
     private void AlertLastPattern()
     {
         PushMessageToBroker(EMessageType.LAST_PATTERN_ALERT);
-    }
-
-    private void AlertGameClear()
-    {
-        PushMessageToBroker(EMessageType.GAME_CLEAR_ALERT);
     }
 
     public void SetBossRotationBoolean(bool _canRotation)
@@ -218,16 +202,23 @@ public class BossController : MonoBehaviour, IPublisher
             go.layer = LayerMask.NameToLayer("BossInvincible");
         cameraActionCallback?.Invoke(curPhaseNum);
         PushMessageToBroker(EMessageType.PHASE_CHANGE);
-
-        if (curPhaseNum == 1)
+        soundManager.StopBGM();
+        if (curPhaseNum == 0)
+        {
+            soundManager.PlayAudio(GetComponent<AudioSource>(),(int)SoundManager.ESounds.PHASECHANGESOUND_01,true,false);
+        }
+        else if (curPhaseNum == 1)
         {
             shield.StopRestorShield();
             StartCoroutine(TempBossUP());
+            soundManager.PlayAudio(GetComponent<AudioSource>(), (int)SoundManager.ESounds.PHASECHANGESOUND_02_01, true, false);
         }
         else if(curPhaseNum == 2)
         {
             animCtrl.OpenBodyUnder();
+            soundManager.PlayAudio(GetComponent<AudioSource>(), (int)SoundManager.ESounds.PHASECHANGESOUND_03, true, false);
         }
+
     }
 
     IEnumerator TempBossUP()
@@ -256,15 +247,17 @@ public class BossController : MonoBehaviour, IPublisher
         if (!isChangingPhase)
             return;
 
+        soundManager.PlayBGM(curPhaseNum);
+        soundManager.StopAudio(GetComponent<AudioSource>());
         if (curPhaseNum == 1)
         {
             //soundManager.PlayAudio(GetComponent<AudioSource>(), (int)SoundManager.ESounds.PHASESOUND_01);
             AlertFirstPatternBomb();
-            ClearShieldGenerator();
             timeBombPatternCtrl.StartPattern();
             return;
         }
-        else if (curPhaseNum >= 2)
+        
+        if (curPhaseNum >= 2)
         {
             //soundManager.PlayAudio(GetComponent<AudioSource>(), (int)SoundManager.ESounds.PHASESOUND_02);
             AlertLastPattern();
@@ -284,13 +277,10 @@ public class BossController : MonoBehaviour, IPublisher
 
         isBossStartRotation = false;
         isChangingPhase = false;
-
         if (curPhaseNum == 0)
         {
             shield.RespawnGenerator();
             InitShieldGeneratorPoint();
-            AlertGameStart();
-
         }
         else if (curPhaseNum == 1)
         {
@@ -446,8 +436,6 @@ public class BossController : MonoBehaviour, IPublisher
     private BossShield shield = null;
     private BombPatternController timeBombPatternCtrl = null;
     private GetRandomSpawnPointDelegate getRandomSpawnPointCallback = null;
-    private VoidVoidDelegate bossClearCallback = null;
-    private VoidVoidDelegate startExplosionCallback = null;
     private BossShieldGeneratorSpawnPoint[] arrCurShieldGeneratorSpawnPoints = null;
     private LastPatternController lastPatternCtrl = null;
 

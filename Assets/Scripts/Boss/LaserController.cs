@@ -7,6 +7,8 @@ public class LaserController : AttackableObject
     public delegate void DestroyBombDelegate(GameObject _bombGo);
     public void Init(float _launchDuration, float _lengthPerSec, float _initWidth, float _initHeight, Color _curColor, int _idx)
     {
+        soundManager = SoundManager.Instance;
+        soundManager.AddAudioComponent(gameObject);
         launchDuration = _launchDuration;
         lengthPerSec = _lengthPerSec;
         initWidth = _initWidth;
@@ -31,7 +33,9 @@ public class LaserController : AttackableObject
 
     private IEnumerator LaunchLaserCoroutine(float _startTime)
     {
-        while(Time.time - _startTime < launchDuration)
+        soundManager.PlayAudio(gameObject.GetComponent<AudioSource>(), (int)SoundManager.ESounds.LASERLAUNCHSOUND,true);
+
+        while (Time.time - _startTime < launchDuration)
         {
             //사운드
             // 연출
@@ -169,6 +173,8 @@ public class LaserController : AttackableObject
         AttackDmg(_other);
     }
 
+    [SerializeField]
+    private SoundManager soundManager = null;
     [SerializeField]
     private float increaseSizeRatio = 0.005f;
 

@@ -18,7 +18,7 @@ public class BulletController : AttackableObject, ISubscriber
     public void Init(float _destroyTime, Vector3 _position, Quaternion _rotation,GatlinMemoryPool _gatlinMemoryPooll = null)
     {
         soundManager = SoundManager.Instance;
-        soundManager.Init(gameObject);
+        soundManager.AddAudioComponent(gameObject);
         //Destroy(gameObject, _destroyTime);
         Invoke("DeactivateBullet", _destroyTime);
         gameObject.transform.position = _position;

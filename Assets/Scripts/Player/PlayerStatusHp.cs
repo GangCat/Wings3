@@ -22,12 +22,6 @@ public class PlayerStatusHp : StatusHp, IPlayerDamageable
 
     public float GetCurHp => curHp;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(fullHpKey))
-            MaxHeal();
-    }
-
     public void GetDamage(float _dmg)
     {
         if (gameObject.layer.Equals(LayerMask.NameToLayer("PlayerInvincible")))
@@ -92,12 +86,6 @@ public class PlayerStatusHp : StatusHp, IPlayerDamageable
         hpUpdateCallback?.Invoke(curHp / maxHp);
     }
 
-    private void MaxHeal()
-    {
-        curHp = maxHp;
-        hpUpdateCallback?.Invoke(curHp / maxHp);
-    }
-
     private VoidVoidDelegate deadCallback = null;
     private VoidFloatDelegate hpUpdateCallback = null;
     private VolumeProfile volumeProfile = null;
@@ -106,6 +94,4 @@ public class PlayerStatusHp : StatusHp, IPlayerDamageable
 
     [SerializeField]
     private float saturationTime = 2f;
-    [SerializeField]
-    private KeyCode fullHpKey = KeyCode.F9;
 }

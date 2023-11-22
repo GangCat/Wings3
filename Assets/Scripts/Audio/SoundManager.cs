@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,10 +9,18 @@ public class SoundManager : MonoBehaviour
 
     [SerializeField]
     private AudioClip[] soundClips;
-    [SerializeField, Range(0, 100)]
+    [SerializeField]
+    private AudioClip[] laserSoundClips;
+    [SerializeField]
+    private AudioClip[] timeBombSoundClips;
+    [SerializeField, Range(0, 300)]
     private float[] volumes;
     [SerializeField, Range(2,10000)]
     private float[] maxDistance;
+
+
+    [SerializeField]
+    private GameObject bgmGO;
     public enum ESounds
     {
         NONE = -1,
@@ -67,8 +76,11 @@ public class SoundManager : MonoBehaviour
         PHASECHANGESOUND_02_02,
         PHASECHANGESOUND_03,
         PHASESOUND_01, 
-        PHASESOUND_02
-
+        PHASESOUND_02,
+        PLAYERIDLESOUND,
+        BGM_01,
+        BGM_02,
+        BGM_03
     }
 
     private AudioSource audioSource;
@@ -86,21 +98,20 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    private void Awake()
+    public void Init()
     {
 
         if(instance == null)
         {
             instance = this;
-
-            DontDestroyOnLoad(this.gameObject);
         }
-
+        AddAudioComponent(bgmGO);
+        PlayBGM(0);
     }
 
     public float Volume { get; set; }
 
-    public void Init(GameObject _other)
+    public void AddAudioComponent(GameObject _other)
     {
         AudioSource representAudioSource = GetComponent<AudioSource>();
         if (_other.GetComponent<AudioSource>() == null)
@@ -138,5 +149,26 @@ public class SoundManager : MonoBehaviour
     public bool IsPlaying(AudioSource _otherAudioSource)
     {
         return _otherAudioSource.isPlaying;
+    }
+    public void PlayBGM(int _curPhaseNum)
+    {
+        StopBGM();
+        // PlayAudio(bgmGO.GetComponent<AudioSource>(),(int)ESounds.CALMBGM,true,false);
+        switch (_curPhaseNum)
+        {
+            case 0:
+                PlayAudio(bgmGO.GetComponent<AudioSource>(), (int)ESounds.BGM_01, true);
+                break;
+            case 1:
+                PlayAudio(bgmGO.GetComponent<AudioSource>(), (int)ESounds.BGM_02, true, false);
+                break;
+            case 2:
+                PlayAudio(bgmGO.GetComponent<AudioSource>(), (int)ESounds.BGM_03, true, false);
+                break;
+        }
+    }
+    public void StopBGM()
+    {
+        StopAudio(bgmGO.GetComponent<AudioSource>());
     }
 }

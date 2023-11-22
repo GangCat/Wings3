@@ -108,7 +108,7 @@ Material:
     m_Ints: []
     m_Floats:
     - Distance: 163.76
-    - FoamAmount: 40
+    - FoamAmount: 30
     - FoamCuttoff: 1.2
     - FoamScale: 50000
     - FoamSpeed: 1
