@@ -1,0 +1,2408 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9121813816973104360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d668820401dbce64d90f6faad36f88e3
+  position: {x: 33, y: 637}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: 2016969803888250028}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &-9063385047689049670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 432c800be9f6f104b9c2e642fdf9de3a
+  position: {x: 1557, y: 1165}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -3961328576919720251}
+  - {fileID: -1653398103952708185}
+  - {fileID: -3764200336901690060}
+--- !u!114 &-8972045692928243962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b6078a8ea6b0678439d66670557fc758
+  position: {x: -1180.3956, y: 884.94037}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: 6871036271617449570}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &-8946921315851600259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a06dc81f4ebf9574e92e4559cba09852
+  position: {x: 1106, y: 637}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: -6024693320858442406}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &-8784311841378576911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2932073b8a6c3b34391576c45d359457, type: 3}
+  m_Name: Parallel
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 0017d1c3ad1dfdc4c874ce79b6cb358e
+  position: {x: 33.000187, y: 501}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -9121813816973104360}
+  - {fileID: -6789884967937151623}
+  - {fileID: -8149892216632681123}
+  - {fileID: -8946921315851600259}
+  - {fileID: -3385513496737040516}
+--- !u!114 &-8149892216632681123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 0ad5dd1d47386674c817af05efa69579
+  position: {x: 699, y: 637}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: 1210790204114747789}
+  restartOnSuccess: 1
+  restartOnFailure: 1
+--- !u!114 &-7752662535426584351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5474b84443faaca4aba449936e7d37dd, type: 3}
+  m_Name: NewLaunchMissileActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 6e432a4c9f0c43d43b502c2e5b65cd97
+  position: {x: -328, y: 1184}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  giantHomingMissilePrefab: {fileID: 6519272339437649605, guid: d884fe74de305374d90e7e2a48159a9a,
+    type: 3}
+  moveSpeed: 600
+  rotateSpeed_Degree: 3
+--- !u!114 &-7167244743880846280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9e411f4095d0a44acd9a25323f5e73, type: 3}
+  m_Name: Log
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 989e16fb32b2c924d9fdd896c1253889
+  position: {x: 1942, y: 1473}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: "\uBC1C\uAD6C\uB974\uAE30 \uD328\uD134"
+  drawGizmos: 0
+  message: 
+--- !u!114 &-6789884967937151623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 45dc2d070a6c6e24085c7cb096217d22
+  position: {x: 308, y: 637}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: 8001639174447310299}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &-6734967783781693836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 11ad1928565f99c499dfe4d6e94358e7
+  position: {x: 275.31, y: 392.99603}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: -5663312727242357505}
+  restartOnSuccess: 0
+  restartOnFailure: 1
+--- !u!114 &-6627441640048975056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ff855d9b7ec4ce489db3b801ab396ee, type: 3}
+  m_Name: ShakeBodySlowRotationActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 5615cef58512e1c4ea59d37e78122220
+  position: {x: 2773, y: 1354}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  maxRotSpeed: 5
+  rotationLimitDegree: 0
+  rotationAccel: 2
+--- !u!114 &-6606512983389126247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460be9e34c566ea45b9e282b1adcb028, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 1de11659f2ab5204e821e1497e94437c
+  position: {x: 1795, y: 758}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -3920158228874092110}
+  - {fileID: 4621661266921457130}
+  - {fileID: 4411008589422368910}
+  - {fileID: 7618470226603610064}
+--- !u!114 &-6024693320858442406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e45aa594bc6bfeb4982d425187b776de
+  position: {x: 1106, y: 824}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 7293067389258134645}
+  - {fileID: -4424825817781227089}
+--- !u!114 &-5663312727242357505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2caab331194743746b8bc78b774f6ec9, type: 3}
+  m_Name: CheckPhaseConditionActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 958237faa024f1847b026216a52f4b05
+  position: {x: 246.31006, y: 500.996}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+--- !u!114 &-5577211489743933035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ff42536a775154f9ed56c81a86c2b5, type: 3}
+  m_Name: WaitGameStartActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d532b4c9b50bf934b96c1fcc7d30fae7
+  position: {x: -182, y: 135}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+--- !u!114 &-5270258638676899760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ef5380999ef5fb847a30308be212449d
+  position: {x: -1255.3956, y: 1160.9404}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  duration: 1
+--- !u!114 &-5016141294669517265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e3162a5072f2c9d45b5ceebf1ebbf89b
+  position: {x: -1562.4674, y: 1056}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  duration: 3
+--- !u!114 &-4676318912752695626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 36003f2ed0d3112438786f22b89b8cec
+  position: {x: 34.000015, y: -3.247052}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -5577211489743933035}
+  - {fileID: 4456204010451904621}
+--- !u!114 &-4531776300853278649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee64948bda9e2fe4fb5ad88265395141, type: 3}
+  m_Name: RandomSelector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: eb6caf9c04c64b54489f7942cabc6832
+  position: {x: 3120, y: 1121}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 3843690250053409745}
+  - {fileID: 6915879143102228442}
+  - {fileID: -4054882901305631100}
+--- !u!114 &-4424825817781227089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9e411f4095d0a44acd9a25323f5e73, type: 3}
+  m_Name: Log
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 9ac5a4999ea28884fa5c47a16e3e8e57
+  position: {x: 1106, y: 974}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: "\uD50C\uB808\uC774\uC5B4\uAC00 \uBCF4\uC2A4 \uBC11\uC5D0\uC11C \uC0C1\uC8FC
+    \uBABB\uD558\uAC8C \uC8FC\uAE30\uC801\uC73C\uB85C \uC0AC\uC6A9\uD560 \uD328\uD134"
+  drawGizmos: 0
+  message: 
+--- !u!114 &-4242738580719785794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: f8f05494b1fb3fb448a2508b03871e51
+  position: {x: -422, y: 501.00003}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -2728791916863248245}
+  - {fileID: 8938822448031267878}
+--- !u!114 &-4119163180678293952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 3504b42bbed75c242badc323efa56cc9
+  position: {x: -1487.4674, y: 912}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -5016141294669517265}
+  - {fileID: 6615249892839680071}
+--- !u!114 &-4054882901305631100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7408b9ba43f78b45b2ebf24fb8fad1f, type: 3}
+  m_Name: CrossLazerActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4b3e099d66c31b44cab967b9f880630c
+  position: {x: 3270, y: 1256}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  crossLaserPrefab: {fileID: 3966714899875067037, guid: b82f45a60c292f64bbe87fa9bc387d33,
+    type: 3}
+  moveAccel: 300
+  maxMoveSpeed: 500
+  rotateAccel: 10
+  maxRotateAccel: 5
+  autoDestroyTime: 20
+  changeFormDistnacec: 300
+  patternFinishTime: 10
+--- !u!114 &-3961328576919720251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df06c4f0391abd540b70686fe8c604e0, type: 3}
+  m_Name: WindBlowAnimActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 484b985cd8bb3ac4e907781fa776e27e
+  position: {x: 1373, y: 1354}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  animTime: 3
+  isWindBlow: 1
+--- !u!114 &-3920158228874092110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: c93426dfd7354f647be0f003a736e075
+  position: {x: 1556, y: 974}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 749988045687392448}
+  - {fileID: -9063385047689049670}
+  - {fileID: 8618335190615036909}
+--- !u!114 &-3764200336901690060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df06c4f0391abd540b70686fe8c604e0, type: 3}
+  m_Name: WindBlowAnimActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 41e424d5a24eac54b93aaaeda8989dc1
+  position: {x: 1706, y: 1354}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  animTime: 3
+  isWindBlow: 0
+--- !u!114 &-3630942497505143009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e64ba17db06cf6a45b43cfe64c36d436
+  position: {x: -422.00003, y: 393}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: -4242738580719785794}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &-3521756875569619873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4113cee8cc9affb428d33d7f5af901cc
+  position: {x: 1942, y: 1354}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -7167244743880846280}
+--- !u!114 &-3385513496737040516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: c5e047faa5ebd2d4db53482a7bcae293
+  position: {x: 1795, y: 637}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: -6606512983389126247}
+  restartOnSuccess: 1
+  restartOnFailure: 1
+--- !u!114 &-3300674228894187429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 3b6acb76305aab54ebe6683a7845a405
+  position: {x: -1487.4674, y: 780.00006}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: -4119163180678293952}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &-2960110222516945772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: eb8c0b277d54b7646937fd1a16e932a4
+  position: {x: 150.8347, y: 972.261}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  duration: 15
+--- !u!114 &-2728791916863248245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39fcd7693d75434092c2dba3c96c074, type: 3}
+  m_Name: CheckIsLastPhase
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d39c84b972a365d4cb0efbb4c94f5918
+  position: {x: -1502.42, y: 637}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+--- !u!114 &-2696702807830603075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7f74c4913265a45a4eb947fa142af0, type: 3}
+  m_Name: LaunchMissileSelectorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e526b4cc0e8575246bab0e11f1d80584
+  position: {x: 699, y: 974}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 6670595513324080788}
+  - {fileID: 8083542919116634970}
+  groupMissileRatio: 0.7
+  curGroupMissileRatio: 0.7
+--- !u!114 &-1653398103952708185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6fe7332ddf08aa4d92ac58651a2c2ff, type: 3}
+  m_Name: WindBlowActionSecondNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 67e12d99acb41a744b261a2cd66c9e33
+  position: {x: 1532, y: 1354}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  totalDuration: 5
+  windCylinderPrefab: {fileID: 1588479054048128854, guid: abf35202cf216d541a24cdafbc612265,
+    type: 3}
+--- !u!114 &-994040158755700915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e27a830fefef7df4c8cae68df7d17ab8
+  position: {x: -145.00002, y: 1183.6777}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  duration: 3
+--- !u!114 &-864796595586614749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: dd115b554d2f2264783ed78c6bffaa41
+  position: {x: -215.13254, y: 780}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 5068272340696876694}
+  - {fileID: 7844854366049574283}
+--- !u!114 &-206360181406563844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163c147d123e4a945b688eddc64e3ea5, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 351e89a5bdde7eb42870b1857ce91572
+  position: {x: 33.99995, y: -125.35}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: -4676318912752695626}
+--- !u!114 &-185823795940874659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460be9e34c566ea45b9e282b1adcb028, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 21e7984bab466754093b4844c6164419
+  position: {x: 34, y: 265}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -3630942497505143009}
+  - {fileID: -8784311841378576911}
+  - {fileID: -6734967783781693836}
+--- !u!114 &-177025576078817775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a935efe2abc5bcc4192b5d8faf9a0a1a, type: 3}
+  m_Name: CannonRainActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e058ee7a701487543bbba7f289e12f91
+  position: {x: 312.41135, y: 973.6}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  bossOffSet: 300
+  mapRadious: {x: 1500, y: 1500}
+  attackMinHeight: 20000
+  attackMaxHeight: 35000
+  cannonBallCnt: 20
+  cannonBallPrefab: {fileID: 8582983355367289449, guid: 8fe2ba31306cd094b80f92e68b37bb36,
+    type: 3}
+  cannonBallSpeed: 2000
+  attackAreaPrefab: {fileID: 9014645002717474501, guid: 3aa6b741342f001459c4ff4187343e3d,
+    type: 3}
+--- !u!114 &-94797651972191598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 6b33e672795d0ba4c910c20dfae4cb66
+  position: {x: 2242, y: 1141}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  duration: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: BossTreeTest
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -206360181406563844}
+  treeState: 0
+  nodes:
+  - {fileID: -206360181406563844}
+  - {fileID: 4456204010451904621}
+  - {fileID: -185823795940874659}
+  - {fileID: -6734967783781693836}
+  - {fileID: -5663312727242357505}
+  - {fileID: -8784311841378576911}
+  - {fileID: -9121813816973104360}
+  - {fileID: 2016969803888250028}
+  - {fileID: -8149892216632681123}
+  - {fileID: 1210790204114747789}
+  - {fileID: 2738026427128793326}
+  - {fileID: -3385513496737040516}
+  - {fileID: -6606512983389126247}
+  - {fileID: 4411008589422368910}
+  - {fileID: 7618470226603610064}
+  - {fileID: 3897127474239721301}
+  - {fileID: 2663481157983243140}
+  - {fileID: -4531776300853278649}
+  - {fileID: 8756652752874628124}
+  - {fileID: 2055624564037474365}
+  - {fileID: 4365113027542136525}
+  - {fileID: 8266297438010400843}
+  - {fileID: -6627441640048975056}
+  - {fileID: 3843690250053409745}
+  - {fileID: 6915879143102228442}
+  - {fileID: -4054882901305631100}
+  - {fileID: -3920158228874092110}
+  - {fileID: -3961328576919720251}
+  - {fileID: -3764200336901690060}
+  - {fileID: 749988045687392448}
+  - {fileID: -9063385047689049670}
+  - {fileID: 8618335190615036909}
+  - {fileID: -4676318912752695626}
+  - {fileID: -5577211489743933035}
+  - {fileID: -1653398103952708185}
+  - {fileID: 6670595513324080788}
+  - {fileID: -2960110222516945772}
+  - {fileID: -177025576078817775}
+  - {fileID: -2696702807830603075}
+  - {fileID: 8083542919116634970}
+  - {fileID: 8001639174447310299}
+  - {fileID: -6789884967937151623}
+  - {fileID: 4621661266921457130}
+  - {fileID: 3604412790404734550}
+  - {fileID: -94797651972191598}
+  - {fileID: 571003812974202368}
+  - {fileID: -3521756875569619873}
+  - {fileID: 6482518635441187889}
+  - {fileID: -7167244743880846280}
+  - {fileID: 5120665318557801352}
+  - {fileID: -8946921315851600259}
+  - {fileID: -6024693320858442406}
+  - {fileID: 7293067389258134645}
+  - {fileID: -4424825817781227089}
+  - {fileID: -3630942497505143009}
+  - {fileID: 8938822448031267878}
+  - {fileID: -2728791916863248245}
+  - {fileID: 1301360150007528721}
+  - {fileID: 4356679827121780672}
+  - {fileID: 7119144240835246101}
+  - {fileID: 3103499326947350516}
+  - {fileID: -3300674228894187429}
+  - {fileID: -4242738580719785794}
+  - {fileID: -4119163180678293952}
+  - {fileID: -5016141294669517265}
+  - {fileID: 6615249892839680071}
+  - {fileID: -8972045692928243962}
+  - {fileID: 6871036271617449570}
+  - {fileID: -5270258638676899760}
+  - {fileID: 5939540183804860932}
+  - {fileID: 2756000942064746228}
+  - {fileID: 2333688221027893785}
+  - {fileID: 2042534252602397742}
+  - {fileID: 323920228470934289}
+  - {fileID: 1485314163221526682}
+  - {fileID: 4114987902543601734}
+  - {fileID: 4432137894282874548}
+  - {fileID: 8191662739534080280}
+  - {fileID: -864796595586614749}
+  - {fileID: 5068272340696876694}
+  - {fileID: 7844854366049574283}
+  - {fileID: 5562317299700778931}
+  - {fileID: -994040158755700915}
+  - {fileID: -7752662535426584351}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+--- !u!114 &323920228470934289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 44bc58f15d3aa834fa3740d2df54c108
+  position: {x: -546, y: 780}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: 1485314163221526682}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &571003812974202368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ac9ba1b9c8155429c0ca0db2e8d15f, type: 3}
+  m_Name: CheckLowBodyRangeActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 263b82ce9c685b5418c2980bbf0b50d5
+  position: {x: 1887, y: 1141}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: "\uD604\uC7AC \uD398\uC774\uC988\uAC00 2\uAC00 \uC544\uB2C8\uBA74
+    \uBB34\uC870\uAC74 failiure \uBC18\uD658"
+  drawGizmos: 0
+  range: 1000
+--- !u!114 &749988045687392448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25f3646ecf62a74abb51be727a1ac03, type: 3}
+  m_Name: CheckWindBlowRangeActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 50c38d1a65ba1134382ec9e6d1dd144e
+  position: {x: 1347, y: 1165}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: "\uD604\uC7AC \uD398\uC774\uC988\uAC00 1\uC774 \uC544\uB2C8\uBA74
+    \uBB34\uC870\uAC74 Failure \uBC18\uD658"
+  drawGizmos: 0
+  range: 400
+--- !u!114 &1210790204114747789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4de0973ae547a8c4a849641c3252a346
+  position: {x: 699, y: 824}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 2738026427128793326}
+  - {fileID: -2696702807830603075}
+--- !u!114 &1301360150007528721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b87c524bccf17f948bd771e232331934
+  position: {x: -1783.4674, y: 780.00006}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: 3103499326947350516}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &1485314163221526682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 8ad32a14fdf47c34580fa4bec8c20dd0
+  position: {x: -546, y: 912}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 4114987902543601734}
+  - {fileID: 8191662739534080280}
+--- !u!114 &2016969803888250028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2caab331194743746b8bc78b774f6ec9, type: 3}
+  m_Name: CheckPhaseConditionActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 54b7283d7e96e994e838736c47bcbebb
+  position: {x: 4.7999663, y: 821.9885}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+--- !u!114 &2042534252602397742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 2f05f287039c44c469a2cdbb457f2473
+  position: {x: -963.4674, y: 1056}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  duration: 6
+--- !u!114 &2055624564037474365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 33ac117dc82b85143b837fd8dcbf1b63
+  position: {x: 2589, y: 1175}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 4365113027542136525}
+  - {fileID: 8266297438010400843}
+  - {fileID: -6627441640048975056}
+--- !u!114 &2333688221027893785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 68834bc568e562745b4edc94c377baa9
+  position: {x: -840.46735, y: 912}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 2042534252602397742}
+  - {fileID: 4432137894282874548}
+--- !u!114 &2663481157983243140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 82743604a5eb9e246b12a9409a71f167
+  position: {x: 2739, y: 1175}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  duration: 4
+--- !u!114 &2738026427128793326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 977840c85b1671e4fae8560c66a1f535
+  position: {x: 552, y: 974}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  duration: 2
+--- !u!114 &2756000942064746228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 38c1dbfc88a709040b5f811d597186a3
+  position: {x: -840.46735, y: 780.00006}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: 2333688221027893785}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &3103499326947350516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 54efcb9e402424f409e078d269f8ae44
+  position: {x: -1783.4674, y: 912}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 4356679827121780672}
+  - {fileID: 7119144240835246101}
+--- !u!114 &3604412790404734550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee64948bda9e2fe4fb5ad88265395141, type: 3}
+  m_Name: RandomSelector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7732e6c14e067bb4d9da829254130dd7
+  position: {x: 2092, y: 1141}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -3521756875569619873}
+  - {fileID: 6482518635441187889}
+--- !u!114 &3843690250053409745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cf64563ffbc2e4ea543f8b184dbed2, type: 3}
+  m_Name: CannonActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 6c1f494de66f6504c945205e4f7b4d63
+  position: {x: 2966.487, y: 1252.0869}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  radious: 50
+  bossOffSet: 220
+  mapRadious: {x: 1000, y: 1000}
+  duration: 6
+  attackMinHeight: 20000
+  attackMaxHeight: 30000
+  term: 2
+  cannonBallCnt: 25
+  cannonBallPrefab: {fileID: 8582983355367289449, guid: d818c161b23da574691dde04d782eb3f,
+    type: 3}
+  cannonBallSpeed: 2500
+  attackAreaPrefab: {fileID: 9014645002717474501, guid: 3cf30d7655db4ab43bcf7a03c2be25b0,
+    type: 3}
+--- !u!114 &3897127474239721301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46401fc1cab67cc40bf38909555ca0d1, type: 3}
+  m_Name: CheckPatternRange
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 19dd5a3c094e56d49840556e44e64c38
+  position: {x: 2439, y: 1175}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  range: 700
+--- !u!114 &4114987902543601734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d0346b5f0ec71e045b4e4f4c798c3b2c
+  position: {x: -621, y: 1056}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  duration: 7
+--- !u!114 &4356679827121780672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 128d478ba36e0c941baa72e03c615683
+  position: {x: -1862.4674, y: 1056}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  duration: 4
+--- !u!114 &4365113027542136525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ff855d9b7ec4ce489db3b801ab396ee, type: 3}
+  m_Name: ShakeBodySlowRotationActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e335242dde037ad4cb014930726676de
+  position: {x: 2332, y: 1354}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  maxRotSpeed: 5
+  rotationLimitDegree: 15
+  rotationAccel: 2
+--- !u!114 &4411008589422368910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 972c3b887bbd4cc47b0fe326de45671b
+  position: {x: 2589, y: 976}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: "\uADFC\uAC70\uB9AC"
+  drawGizmos: 0
+  children:
+  - {fileID: 3897127474239721301}
+  - {fileID: 2055624564037474365}
+  - {fileID: 2663481157983243140}
+--- !u!114 &4432137894282874548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b286711adfd99ed4c835ce21194261d4, type: 3}
+  m_Name: LaunchMissileGroupActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 58266a377bb69da4892aca7aa34d0601
+  position: {x: -816, y: 1056}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  missilePrefab: {fileID: 6519272339437649605, guid: e0286bdea80e5df419a142192f36ac21,
+    type: 3}
+  moveSpeed: 400
+  rotateSpeed_Degree: 2
+  spawnRate: 1
+--- !u!114 &4456204010451904621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 98b90d94569af4c45af77f74e008cfa7
+  position: {x: 34.000027, y: 124.011314}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: -185823795940874659}
+  restartOnSuccess: 1
+  restartOnFailure: 1
+--- !u!114 &4621661266921457130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 36981391b53d9fb4d8deaf4e32e437ea
+  position: {x: 2092, y: 974}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 571003812974202368}
+  - {fileID: 3604412790404734550}
+  - {fileID: -94797651972191598}
+--- !u!114 &5068272340696876694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b8402ff37c911bf44bc17b71b4078d1d
+  position: {x: -365.0001, y: 912.00006}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  duration: 60
+--- !u!114 &5120665318557801352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9e411f4095d0a44acd9a25323f5e73, type: 3}
+  m_Name: Log
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: f6353b5cf11504c43b2d950eee578807
+  position: {x: 2092, y: 1473}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: "\uBC14\uB78C \uBC1C\uC0AC\uD558\uB294 \uD328\uD134 / \uC790\uC138
+    \uB0AE\uCD94\uB294 \uD328\uD134"
+  drawGizmos: 0
+  message: 
+--- !u!114 &5562317299700778931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: f080f486fc517fd4aa9b16a4120ebff1
+  position: {x: -215, y: 1041}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -7752662535426584351}
+  - {fileID: -994040158755700915}
+--- !u!114 &5939540183804860932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a935efe2abc5bcc4192b5d8faf9a0a1a, type: 3}
+  m_Name: CannonRainActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a47bfd33d39be8d408b0f312ee97e1d0
+  position: {x: -1105.3956, y: 1160.9404}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  bossOffSet: 2000
+  mapRadious: {x: 5000, y: 5000}
+  attackMinHeight: 500
+  attackMaxHeight: 5000
+  cannonBallCnt: 1000
+  cannonBallPrefab: {fileID: 8582983355367289449, guid: 8fe2ba31306cd094b80f92e68b37bb36,
+    type: 3}
+  cannonBallSpeed: 100
+  attackAreaPrefab: {fileID: 9014645002717474501, guid: 3aa6b741342f001459c4ff4187343e3d,
+    type: 3}
+--- !u!114 &6482518635441187889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e2183ecb07c8b574e9558f1aa84ba7f5
+  position: {x: 2092, y: 1354}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 5120665318557801352}
+--- !u!114 &6615249892839680071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cf64563ffbc2e4ea543f8b184dbed2, type: 3}
+  m_Name: CannonActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 925768e2f49d95b41a51fa97e01759b8
+  position: {x: -1412.0001, y: 1056}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  radious: 100
+  bossOffSet: 500
+  mapRadious: {x: 5000, y: 5000}
+  duration: 9
+  attackMinHeight: 1000
+  attackMaxHeight: 1500
+  term: 3
+  cannonBallCnt: 80
+  cannonBallPrefab: {fileID: 8582983355367289449, guid: d818c161b23da574691dde04d782eb3f,
+    type: 3}
+  cannonBallSpeed: 1000
+  attackAreaPrefab: {fileID: 9014645002717474501, guid: 3cf30d7655db4ab43bcf7a03c2be25b0,
+    type: 3}
+--- !u!114 &6670595513324080788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5474b84443faaca4aba449936e7d37dd, type: 3}
+  m_Name: NewLaunchMissileActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: af63c3e958be1014799d56d076546007
+  position: {x: 504.99994, y: 1179}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  giantHomingMissilePrefab: {fileID: 6519272339437649605, guid: d884fe74de305374d90e7e2a48159a9a,
+    type: 3}
+  moveSpeed: 400
+  rotateSpeed_Degree: 70
+--- !u!114 &6871036271617449570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4a863bf72c2bfff4aa5e2f796a113fc3
+  position: {x: -1180.3956, y: 1016.94037}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -5270258638676899760}
+  - {fileID: 5939540183804860932}
+--- !u!114 &6915879143102228442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92573731de47a4449f1c4eb9210c101, type: 3}
+  m_Name: GatilingActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 84addfb7f5b157142bd01f6ba70b9c80
+  position: {x: 3120, y: 1256}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  bulletPrefab: {fileID: 6519272339437649605, guid: cd6c9962db9d58b42b351e01d640131f,
+    type: 3}
+  maxBulletCnt: 80
+  rotationSpeed: 30
+  fireRate: 10
+  headRotationSpeed: 20
+  rebound: 2
+  autoDestroyTime: 20
+  minDegreeToRotateGun: -25
+  isRandomShoot: 0
+--- !u!114 &7119144240835246101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92573731de47a4449f1c4eb9210c101, type: 3}
+  m_Name: GatilingActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: c3deaecef4f9f7c418342a7c7ab709f0
+  position: {x: -1712, y: 1056}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  bulletPrefab: {fileID: 6519272339437649605, guid: cd6c9962db9d58b42b351e01d640131f,
+    type: 3}
+  maxBulletCnt: 80
+  rotationSpeed: 30
+  fireRate: 10
+  headRotationSpeed: 20
+  rebound: 2
+  autoDestroyTime: 20
+  minDegreeToRotateGun: -30
+  isRandomShoot: 1
+--- !u!114 &7293067389258134645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 854ee4ba16070fb4ab81d4f93b1462d0
+  position: {x: 956, y: 971.5102}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  duration: 1
+--- !u!114 &7618470226603610064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: cc5ae9abc2b7f664987e3e2cfb47be60
+  position: {x: 3120, y: 976}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: "\uC6D0\uAC70\uB9AC"
+  drawGizmos: 0
+  children:
+  - {fileID: -4531776300853278649}
+  - {fileID: 8756652752874628124}
+--- !u!114 &7844854366049574283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 3e7d5e52b8e1de6439160968793ea450
+  position: {x: -215, y: 912}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: 5562317299700778931}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &8001639174447310299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: db43a344593cb5f4991217841bb0267f
+  position: {x: 310.40002, y: 821.6871}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -2960110222516945772}
+  - {fileID: -177025576078817775}
+--- !u!114 &8083542919116634970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b286711adfd99ed4c835ce21194261d4, type: 3}
+  m_Name: LaunchMissileGroupActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 99f2d88d4b702194c8809794671f48ba
+  position: {x: 688, y: 1179}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  missilePrefab: {fileID: 6519272339437649605, guid: a206188b9df11604cb460e77e58be909,
+    type: 3}
+  moveSpeed: 300
+  rotateSpeed_Degree: 70
+  spawnRate: 1
+--- !u!114 &8191662739534080280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7408b9ba43f78b45b2ebf24fb8fad1f, type: 3}
+  m_Name: CrossLazerActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 76b1faf95ddb9c64c98d970813acfb65
+  position: {x: -471, y: 1056}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  crossLaserPrefab: {fileID: 3966714899875067037, guid: b82f45a60c292f64bbe87fa9bc387d33,
+    type: 3}
+  moveAccel: 300
+  maxMoveSpeed: 500
+  rotateAccel: 5
+  maxRotateAccel: 5
+  autoDestroyTime: 20
+  changeFormDistnacec: 500
+  patternFinishTime: 10
+--- !u!114 &8266297438010400843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9df152b7c6c5324aa6224030404c9ee, type: 3}
+  m_Name: ShakeBodyFastRotationActionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 589a5d3feddbe9146bcd95a9734120d9
+  position: {x: 2554, y: 1354}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  maxRotSpeed: 15
+  rotationLimitAngle: -20
+  rotationAccel: 5
+  attackRange: 800
+  shakeBodyTag: ShakeBodyCollider
+  effectTornado: {fileID: 6185979661563687016, guid: 74b7b164fd9c7a64c900280d76948ba0,
+    type: 3}
+--- !u!114 &8618335190615036909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 51a5755b15126724c8d377cd59ba51b3
+  position: {x: 1707, y: 1165}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  duration: 4
+--- !u!114 &8756652752874628124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 3af9c4a51ae432b4e9c7c4df56cfafa3
+  position: {x: 3270, y: 1121}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  duration: 4
+--- !u!114 &8938822448031267878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2932073b8a6c3b34391576c45d359457, type: 3}
+  m_Name: Parallel
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 636369a1f3f13e140a092dca5139e783
+  position: {x: -422.00003, y: 637}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    isPhaseEnd: 0
+    curPhaseNum: 0
+    curClosedWeakPoint: 0
+    isShieldDestroy: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 1301360150007528721}
+  - {fileID: -3300674228894187429}
+  - {fileID: 2756000942064746228}
+  - {fileID: 323920228470934289}
+  - {fileID: -864796595586614749}

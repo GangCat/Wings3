@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e598aaa83a39b5e4dae35e2ee0f900f3, type: 3}
+  m_Name: PlayerData 0
+  m_EditorClassIdentifier: 
+  tr: {fileID: 0}
+  input: {fileID: 0}
+  maxHealth: 100
+  stamina: 100
+  moveBackVelocityLimit: -20
+  moveForwardVelocityLimit: 300
+<<<<<<< HEAD
+  moveAccel: 400
+=======
+  moveAccel: 1000
+>>>>>>> origin/PB
+  moveDashSpeed: 60
+  moveDashAccel: 100
+  moveStopAccel: 40
+  gravityAccel: 0
+  gravitySpeed: 100
+  isDash: 0
+  isCrash: 0
+  isAction: 0
+  dodgeSpeed: 500
+  dodgeDuration: 0.3
+  rotCamSpeed: 75
+  rotCamXAxisSensitive: 2
+  rotCamYAxisSensitive: 1.5
+  minAngleX: -80
+  maxAngleX: 80
+  isFreeLock: 0
+  returnMouseSpeed: 100
+  mouseSensitive: 4
+  maxMouseSpeed: 6
+  maxMouseRadius: 100
+  returnMouseRadius: 90
+  currentMousePos: {x: 0, y: 0}
+  rollAccel: 1000
+  rollMaxVelocity: 200
+  rollMaxAngle: 80
+  rollReturnAccel: 100
+  currentRotZ: 0
+<<<<<<< HEAD
+  currentMoveSpeed: 204.0337
+=======
+  currentMoveSpeed: 0
+>>>>>>> origin/PB

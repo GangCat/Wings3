@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Floor
+  - Boss
+  - ShakeBodyCollider
+  - WindBlow
+  - CrossLaser
+  - CannonBall
+  - GatlingGunBullet
+  - GatlingGunMuzzle
+  - Obstacle
+  - BossShield
+  - GiantHomingMissile
+  - TimeBomb
+  - BossLaser
+  - WindBlowForPattern
+  - HomingMissile
+  - BossBody
+  - LastPatternCollider
+  - HealMarble
+<<<<<<< HEAD
+  - GroupHomingMissile
+  - CannonRainBall
+  - Target
+  - BossShieldGenerator
+  - GatlinGunMuzzle
+=======
+  - AirPush
+  - InstantDeath
+>>>>>>> origin/geohyung02
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - BossShieldGenerator
+  - MuseTextureLayer
+  - BossProjectile
+  - PlayerInvincible
+  - floor
+  - BossHomingMIssile
+  - Boss
+  - Obstacle
+  - TimeBomb
+  - BossShieldBroken
+  - BossInvincible
+  - BossBody
+  - HealMarble
+  - PlayerWing
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - InformationLayer
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

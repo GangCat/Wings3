@@ -3,7 +3,32 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Floor
+  - Boss
+  - ShakeBodyCollider
+  - WindBlow
+  - CrossLaser
+  - CannonBall
+  - GatlingGunBullet
+  - GatlingGunMuzzle
+  - Obstacle
+  - BossShield
+  - GiantHomingMissile
+  - TimeBomb
+  - BossLaser
+  - WindBlowForPattern
+  - HomingMissile
+  - BossBody
+  - LastPatternCollider
+  - HealMarble
+  - GroupHomingMissile
+  - CannonRainBall
+  - Target
+  - BossShieldGenerator
+  - GatlinGunMuzzle
+  - AirPush
+  - Boundary
   layers:
   - Default
   - TransparentFX
@@ -11,32 +36,32 @@ TagManager:
   - 
   - Water
   - UI
+  - Player
+  - BossShieldGenerator
+  - MuseTextureLayer
+  - BossProjectile
+  - PlayerInvincible
+  - floor
+  - BossHomingMIssile
+  - Boss
+  - Obstacle
+  - TimeBomb
+  - BossShieldBroken
+  - BossInvincible
+  - BossBody
+  - HealMarble
+  - PlayerWing
+  - BossSitDownAction
+  - PullTrigger
+  - DestroyTrigger
+  - LastPatternCollider
+  - WindTornado
   - 
   - 
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - InformationLayer
   m_SortingLayers:
   - name: Default
     uniqueID: 0
